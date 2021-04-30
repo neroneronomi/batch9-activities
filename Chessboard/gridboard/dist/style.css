@@ -1,0 +1,111 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(138, 120, 93, 0.8);
+  background-image: url("../images/test.jpg");
+}
+
+h1 {
+  color: #faebd7;
+  text-shadow: 4px 4px 18px #251300;
+  text-align: center;
+  margin: 25px;
+}
+
+.chessboard {
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0;
+  -ms-grid-columns: (5.55vw)[8];
+      grid-template-columns: repeat(8, 5.55vw);
+  -ms-grid-rows: (5.55vw)[8];
+      grid-template-rows: repeat(8, 5.55vw);
+  place-content: center;
+  width: 45vw;
+  border: 6px solid #251300;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 1px 28px #251300;
+          box-shadow: 2px 1px 28px #251300;
+}
+
+.white, .black {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  font-size: 4vw;
+  background-color: rgba(138, 120, 93, 0.8);
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+
+.black {
+  background-color: rgba(87, 62, 46, 0.9);
+}
+
+.white:nth-last-child(-n+16),
+.black:nth-last-child(-n+16) {
+  color: #faebd7;
+}
+
+.white:nth-last-child(-n+16):hover,
+.black:nth-last-child(-n+16):hover {
+  -webkit-animation: pulse 0.8s infinite;
+          animation: pulse 0.8s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.white:nth-child(-n+16):hover,
+.black:nth-child(-n+16):hover {
+  -webkit-animation: pulse 0.8s infinite;
+          animation: pulse 0.8s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */

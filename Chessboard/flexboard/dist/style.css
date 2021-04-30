@@ -1,0 +1,122 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(138, 120, 93, 0.8);
+  background-image: url("../images/test.jpg");
+}
+
+h1 {
+  color: #faebd7;
+  text-shadow: 4px 4px 18px #251300;
+  text-align: center;
+  margin: 25px;
+}
+
+.chessboard {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 45.5vw;
+  height: 45.5vw;
+  border: 6px solid #251300;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 1px 28px #251300;
+          box-shadow: 2px 1px 28px #251300;
+}
+
+.white, .black {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 12.5%;
+  /* no.of.boxex = 8x8 = 64 */
+  height: 12.5%;
+  /* (√no.of.boxes)(100) / no.of.boxes = % */
+  background-color: rgba(138, 120, 93, 0.8);
+  font-size: 4vw;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+
+.black {
+  background-color: rgba(87, 62, 46, 0.9);
+}
+
+.white:nth-last-child(-n+16),
+.black:nth-last-child(-n+16) {
+  color: #faebd7;
+}
+
+.white:nth-last-child(-n+16):hover,
+.black:nth-last-child(-n+16):hover {
+  -webkit-animation: pulse 0.8s infinite;
+          animation: pulse 0.8s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.white:nth-child(-n+16):hover,
+.black:nth-child(-n+16):hover {
+  -webkit-animation: pulse 0.8s infinite;
+          animation: pulse 0.8s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
