@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/surveyformstyles.css"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/87db619795.js" crossorigin="anonymous"></script> 
+  <title>Survey Form</title>
+</head>
+<body>
+  <section>
+    <div class="main">
+      <form id="survey-form" action="index2.html" method="GET" autocomplete="off"> 
+        <div class="step step-1 active">
+          <div class="form-group">
+            <div class="firstPage">
+            <p id="description">Take care of yourself, know your stress.</p>
+            <p id="title">Am I too stressed? How much stress is too much? Use this short quiz to measure whether your stress level is too high.</p>
+            </div>
+            <br>
+          </div>
+              <button id="firstB" type="button" class="next-btn">Take Test</button>
+        </div>
+        <div class="step step-2">
+          <fieldset>
+            <legend>Personal Details</legend>
+            <div class="form-group">
+              <label id="name-label" for="name">Name:</label>
+              <input type="text" required id="name" name="name" placeholder="enter name here"><br>
+              <br>
+            </div>
+
+            <div class="form-group">
+              <label id="age" for="age">Age:</label><br>
+              <input class="number" type="number" name="age" placeholder="age"  min="1" max="99"><br>
+              <br>
+            </div>
+
+            <div class="form-group">
+              <label id="gender" for="gender">Gender:</label><br>
+              <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contact Details</legend>
+            <div class="form-group">
+              <label id="email-label" for="Email">Email:</label>
+              <input type="email" required id="email" name="email" placeholder="enter email here"><br>
+              <br>
+            </div>
+            
+            <div class="form-group">
+              <label id="number-label" for="phone">Mobile Number:</label>
+              <input type="number" id="number" name="number" placeholder="enter number here">
+            </div>
+          </fieldset>
+            <button type="button" class="previous-btn"><i class="fas fa-angle-double-left"></i></button>
+            <button type="submit" class="submit-btn"><i class="fas fa-angle-double-right"></i></button>
+        </div>
+    </div>
+  </section>
+  <script src="main.js"></script> 
+</body>
+</html>
