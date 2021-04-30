@@ -1,0 +1,73 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $lightbrown;
+    background-image: url('../images/test.jpg');
+}
+
+h1 {
+    color: $white;
+    text-shadow: 4px 4px 18px $darkdarkbrown;
+    text-align: center;
+    margin: 25px;
+}
+
+.chessboard {
+    margin: auto;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(8, 5.55vw);
+    grid-template-rows: repeat(8, 5.55vw);
+    place-content: center;
+    width: 45vw;
+    border: 6px solid $darkdarkbrown;
+    border-radius: 4px;
+    box-shadow: 2px 1px 28px #251300;
+}
+
+.white, .black {    
+    display: grid;
+    place-content: center;
+    font-size: 4vw;
+    background-color: $lightbrown;
+    transition: all 0.8s ease-out;
+}
+
+.black {
+    background-color: $darkbrown;
+}
+
+.white:nth-last-child(-n+16), 
+.black:nth-last-child(-n+16) {
+    color: $white
+}
+
+.white:nth-last-child(-n+16):hover, 
+.black:nth-last-child(-n+16):hover {
+    animation: pulse 0.8s infinite;
+    animation-timing-function: linear;
+    cursor: grab; 
+}
+
+.white:nth-child(-n+16):hover, 
+.black:nth-child(-n+16):hover {
+    animation: pulse 0.8s infinite;
+    animation-timing-function: linear;
+    cursor: grab; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+    
