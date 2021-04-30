@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/results.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/87db619795.js" crossorigin="anonymous"></script> 
+    <title>Results Page</title>
+</head>
+<body>
+    <section>
+    <div class="main">
+    <div class="col-xs-12">
+        <blockquote>
+            <i class="fa fa-quote-left quotemark"></i>
+            <h2 id="quotetext">You don't have to see the whole staircase, just take the first step.</h2>
+            <br>
+            <br>
+            <footer id="quotesource">―Martin Luther King</footer>
+        </blockquote>
+    </div>
+    <div id="results"></div>
+    <br>
+    <a href="index.html">Back to Form</a>
+</div>
+</section> 
+    <script>
+        const resultsList = document.getElementById('results')
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            resultsList.append(`${name}: ${value}`)
+            resultsList.append(document.createElement('br'))
+        })
+    </script> 
+</body>
+</html>
+
