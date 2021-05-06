@@ -3,9 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <title>Landing Page</title>
 </head>
 <body>
-    
+
+    <header id="header"><!--User Story #1-->
+        <img src="./images/logo.png" alt="Callaway Golf" id="header-img"><!--User Story #2-->
+        <nav id="nav-bar"><!--User Story #3-->
+            <a href="#home" class="nav-link">Home</a><!--User Story #4 & #5-->
+            <a href="#about" class="nav-link">About</a>
+            <a href="#products" class="nav-link">Products</a>
+        </nav>
+    </header>
+
+
+    <section id="home">
+        <div class="container">
+            <div class="left"></div>
+            <div class="right">
+              <div class="content">
+                <h1><img src="/images/apex-logo.png" alt=""></h1>
+                <p>INTRODUCING THE NEW APEX 21 FAMILY</p>
+                <br>
+                <a href="#" class="btn">EXPLORE</a>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section id="about">
+        <div class="containerz">
+        <div class="leftz">
+            <div class="contentz">
+              <h1>There’s Nothing Like Our Best</h1>
+              <p>The NEW Apex 21 Irons deliver an extraordinary level of forged performance and craftsmanship that we’ve never seen before. They’re the first forged iron designed with Artificial Intelligence for faster ball speeds and improved spin consistency.</p>
+            </div>
+          </div>
+          <div class="rightz">
+            <video id="video" width="100%" height="100%" controls muted> <!--User Story #6-->
+                <source src="/images/apexvideo.mp4" type="video/mp4">
+              </video>
+               
+          </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="leftx">
+            <div class="contentx">
+              <h1>Features & Benefits</h1>
+              <ul>
+                 <li><b>The First Apex Iron Designed With A.I.</b><br>
+                    <span>Our A.I.-designed Flash Face Cup is in a forged Apex Iron for the first time ever. The unique A.I. architecture in each iron creates high ball speeds and increased spin robustness across the face. They’re engineered for impressive distance and pinpoint control.</span>
+                </li>
+                 <li><b>Consistent Launch and Increased Forgiveness</b><br>
+                    <span>For the first time, we’ve implemented our Tungsten Energy Core into an Apex Iron. With 5x the tungsten of Apex 19, we can precisely position the Center of Gravity to promote outstanding launch throughout the set, and more forgiveness on off-center shots.</span>
+                 </li>
+                 <li><b>Forged Blade Feel In A Players Distance Iron</b><br>
+                    <span>Apex Irons are renowned for their pure feel, and Apex 21 is no different. The body of the iron is 100% forged from a 1025 mild carbon steel body, and our patented urethane microspheres deliver exceptional sound and feel at impact. The improved shaping also helps to enhance feel through the turf.</span>
+                 </li>
+              </ul>
+            </div>
+          </div>
+        <div class="containerx">
+            <div class="card">
+                <div class="contentx">
+                    <h2>Apex 21</h2>
+                    <p>Players Distance</p>
+                    <a href="#">Read More</a>
+                </div>
+            <img src="./images/apex.png" alt="apex">
+            </div>
+
+            <div class="card">
+                <div class="contentx">
+                    <h2>Apex PRO</h2>
+                    <p>Players Performance</p>
+                    <a href="#">Read More</a>
+                </div>
+            <img src="./images/apex-pro.png" alt="apex">
+            </div>
+
+            <div class="card">
+                <div class="contentx">
+                    <h2>Apex DCB</h2>
+                    <p>Game Improvement</p>
+                    <a href="#">Read More</a>
+                </div>
+            <img src="./images/apex-dcb.png" alt="apex">
+            </div>
+        </div>    
+    </section>
+
+    <footer id="footer">
+        <div class="address">
+         <span>
+            2180 Rutherford Road - Carlsbad, CA 92008<br>
+            1-877-723-5218<br>
+            © 2020 Callaway Golf Company. All rights reserved.
+        </span>
+        </div>
+
+        <div class="socmeds">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+
+        <form id="form" action="/" method="GET" autocomplete="off"><!--User Story #7 to #12-->
+        <label for="email"><b>Subscribe To Our Newsletter</b></label><br> 
+        <input type="email" required id="email" name="email" placeholder=" Enter your email address">
+        <button type="submit" class="submit-btn"><i class="far fa-paper-plane"></i></button>
+        </form>
+    </footer>
+  
+    <script src="/app/js/main.js"></script>
 </body>
 </html>
