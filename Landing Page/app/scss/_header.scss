@@ -7,10 +7,11 @@
     grid-template-columns: 200px auto 400px;
     grid-template-rows: 80px;
     place-items: center;
+    position: fixed;
 }
 
 #header-img {
-    height: 90%;
+    height: 80%;
     margin: 2px;
     grid-column: 1;
     place-items: center start;
@@ -36,6 +37,7 @@
         height: 160px;
         grid-template-columns: 10px auto 10px;
         grid-template-rows: 80px 80px;
+        position: relative;
     }
 
     #header-img {
