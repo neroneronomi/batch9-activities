@@ -60,16 +60,24 @@
 
 @media only screen and (max-width: 416px) {
     #features {
-        min-height: 100vh;
+        height: 1340px;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
     }
 
     .container-c {
         width: 75%;
-        margin-top: 80px;
+        text-align: justify;
+    }
+
+    .container-c ul li {
         text-align: left;
+    }
+
+    .container-c h1 {
+        text-align: center;
     }
 
     .image-features {

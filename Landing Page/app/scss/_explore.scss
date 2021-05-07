@@ -86,16 +86,15 @@
 @media only screen and (max-width: 416px) {
 
     #explore {
-        min-height: 100vh;
+        height: 800px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
 
     .image-explore {
         width: 30%;
-        margin-top: 20px;
     }
 
     .container-b {

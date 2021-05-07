@@ -114,21 +114,22 @@
 
   @media only screen and (max-width: 414px) {
     #about {
-      min-height: 100vh;
+      height: 840px;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
     }
 
     .image-box {
       width: 88%;
       height: 200px;
-      margin: 40px 0px;
+      margin: 20px 0px;
     }
 
     .container-a {
       width: 80%;
-      height: 440px;
+      height: 430px;
     }
 
   }
