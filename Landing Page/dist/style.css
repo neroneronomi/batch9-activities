@@ -243,7 +243,7 @@ a, a:visited, a:hover {
 
 @media only screen and (max-width: 414px) {
   #about {
-    min-height: 100vh;
+    height: 840px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -251,6 +251,9 @@ a, a:visited, a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -258,11 +261,11 @@ a, a:visited, a:hover {
   .image-box {
     width: 88%;
     height: 200px;
-    margin: 40px 0px;
+    margin: 20px 0px;
   }
   .container-a {
     width: 80%;
-    height: 440px;
+    height: 430px;
   }
 }
 
@@ -375,7 +378,7 @@ a, a:visited, a:hover {
 
 @media only screen and (max-width: 416px) {
   #explore {
-    min-height: 100vh;
+    height: 800px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -383,16 +386,15 @@ a, a:visited, a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .image-explore {
     width: 30%;
-    margin-top: 20px;
   }
   .container-b {
     width: 88%;
@@ -485,7 +487,7 @@ a, a:visited, a:hover {
 
 @media only screen and (max-width: 416px) {
   #features {
-    min-height: 100vh;
+    height: 1340px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -493,14 +495,22 @@ a, a:visited, a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .container-c {
     width: 75%;
-    margin-top: 80px;
+    text-align: justify;
+  }
+  .container-c ul li {
     text-align: left;
+  }
+  .container-c h1 {
+    text-align: center;
   }
   .image-features {
     width: 80%;
@@ -733,7 +743,7 @@ a, a:visited, a:hover {
 
 @media only screen and (max-width: 416px) {
   #shop {
-    min-height: 100vh;
+    height: 1500px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -741,10 +751,12 @@ a, a:visited, a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 600px;
   }
   .container-d {
     -webkit-box-orient: vertical;
@@ -894,8 +906,7 @@ a, a:visited, a:hover {
 
 @media only screen and (max-width: 416px) {
   #footer {
-    height: 100vh;
-    margin-top: 700px;
+    height: 740px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -903,9 +914,9 @@ a, a:visited, a:hover {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

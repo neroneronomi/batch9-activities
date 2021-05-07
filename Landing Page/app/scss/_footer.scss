@@ -113,11 +113,10 @@
 @media only screen and (max-width: 416px) {
 
     #footer {
-        height: 100vh;
-        margin-top: 700px;
+        height: 740px;
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         
     }

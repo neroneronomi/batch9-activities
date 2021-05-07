@@ -183,11 +183,11 @@
  @media only screen and (max-width: 416px) {
 
     #shop {
-        min-height: 100vh;
+        height: 1500px;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
-        margin-top: 600px;
     }
 
     .container-d {
