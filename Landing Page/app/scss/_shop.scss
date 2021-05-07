@@ -1,0 +1,204 @@
+#shop {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(8, 12.5%);
+}
+
+.container-d {
+    grid-column: 2 / 8;
+    grid-row: 2 / 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.container-d .card {
+    position: relative;
+    width: 375px;
+    height: 300px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.container-d .card::before {
+    content: "";
+    background-image: linear-gradient( 109.6deg,  rgba(83,5,5,1) 11.2%, rgba(0,0,0,1) 91.1% );
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.94;
+  }
+
+.container-d .card img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 320px;
+    transition: 0.5s;
+}
+
+.container-d .card:hover img {
+    left: 73%;
+    height: 200px;
+}
+
+.container-d .card .content-d {
+    position: relative;
+    width: 60%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.container-d .card:hover .content-d {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.container-d .card .content-d h2 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.container-d .card .content-d p {
+    color: white;
+    font-size: $font-sm;
+    position: relative;
+}
+
+.container-d .card .content-d a {
+    position: relative;
+    color: #111;
+    background: white;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 40px;
+    font-size: $font-es;
+}
+
+.container-e {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+}
+
+.container-e h1 {
+    color: $red;
+    font-size: $font-xlg;
+}
+
+.container-e h1 b {
+    color: black;
+}
+
+.review {
+    grid-column: 2 / 8;
+    grid-row: 7 / 8;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.review h1 {
+    font-size: $font-xlg;
+    padding-bottom: 15px;
+}
+
+.review h1 b {
+    color: $red;
+}
+
+.review span {
+    font-weight: bold;
+}
+
+.image-review {
+    grid-column: 4 / 6;
+    grid-row:  5 / 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-review img {
+    border-radius: 50%;
+    width: 35%;  
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .container-d .card {
+        width: 280px;
+        align-items: flex-start;
+        height: 220px;
+    }
+
+    .container-d .card:hover {
+        height: 380px;
+    }
+
+    .container-d .card img {
+        height: 220px;
+    }
+
+    .container-d .card:hover img {
+        left: 50%;
+        height: 200px;
+    }
+
+    .container-d .card .content-d {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+
+    .review h1 {
+        padding-bottom: 20px;
+        margin-top: -50px;
+    }
+
+}
+
+@media  screen and (min-height: 1366px) {
+    .container-e {
+        grid-column: 2 / 5;
+        align-self: center;
+    }
+
+}
+
+ @media only screen and (max-width: 416px) {
+
+    #shop {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 600px;
+    }
+
+    .container-d {
+        flex-direction: column;
+    }
+
+    .image-review {
+        margin-top: 20px;
+    }
+    .review {
+        margin-top: 80px;
+    }
+    
+ }
