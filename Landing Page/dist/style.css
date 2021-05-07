@@ -743,7 +743,7 @@ a, a:visited, a:hover {
 
 @media only screen and (max-width: 416px) {
   #shop {
-    height: 1500px;
+    height: 1620px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
