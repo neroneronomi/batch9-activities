@@ -1,0 +1,30 @@
+body {
+    background-color: grey;
+}
+
+.grid {
+    background-color: #FFFFFF;
+    width: 380px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.button-container {
+    margin-left: 85px;
+}
+
+button {
+    height: 30px;
+    width: 100px;
+    background-color: #FFABAB;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+#down {
+    width: 150px;
+    background-color: #6EB5FF;
+}
