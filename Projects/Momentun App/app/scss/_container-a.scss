@@ -1,0 +1,38 @@
+#container-a {
+    grid-column: 13 / 16;
+    grid-row: 3 / 9;
+    padding: 10px;
+    position: relative;
+}
+
+#container-a::before {
+    content: "";
+    background: $bgcolor;
+    position: absolute;
+    border-radius: 4px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: $bgopacity
+  }
+
+#container-a h2 {
+    text-align: center;
+    margin: 15px 0px;
+    position: relative;
+    font-family:'Special Elite', cursive;
+    letter-spacing: 1.3px;
+}
+
+
+#addSu {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#addSu input {
+    background: transparent;
+}

@@ -1,0 +1,181 @@
+#container-d {
+    grid-column: 2 / 13;
+    grid-row: 4 / 16;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(8, 12.5%);
+    position: relative;
+    margin-top: 8px;
+    margin-right: 50px;
+}
+
+#container-d::before {
+    content: "";
+    background: $bgcolor;
+    position: absolute;
+    border-radius: 4px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: $bgopacity
+  }
+
+#displayGreeting {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    place-self: center;
+    position: relative;
+    font-family:'Special Elite', cursive;
+    letter-spacing: 1.3px;
+}
+
+#displayName {
+    grid-column: 2 / 5;
+    grid-row: 2;
+    place-self: center;
+    align-self: start;
+    position: relative;
+    font-family:'Special Elite', cursive;
+    letter-spacing: 1.3px;
+    text-transform: capitalize;
+    color: wheat
+}
+
+#displayName:hover {
+    animation: pulse 1.5s infinite;
+    animation-timing-function: linear;
+    color: $labelColor;
+    cursor: none;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.8); }
+    100% { transform: scale(1); }
+  }
+    
+//StandUp Display
+#displaySu {
+    grid-column: 1 / 6;
+    grid-row: 2 / 5;
+    margin-top: 40px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+#displaySu p {
+    color: wheat;
+    font-size: $font-med;
+}
+
+#displaySu h3 {
+    margin-bottom: 10px;
+}
+
+///Quote Container
+#displayQuote {
+    grid-column: 1 / 6;
+    grid-row: 5 / 8;
+    padding-right: 20px;
+    padding-top: 20px;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 50px;
+    border-top: 2px solid #DFB015;
+}
+
+#quote{
+    font-size: $font-xlg;
+}
+#author {
+    margin-top: 20px;
+    font-size: $font-med;
+    color: wheat;
+}
+
+.wrapperBtn {
+    grid-column: 2 / 5;
+    grid-row: 8;
+    place-self: center;
+    position: relative;
+}
+
+.wrapperBtn button {
+    margin: 5px 10px;
+    font-size: $font-xlg;
+    position: relative;
+    color: wheat;
+    transition: all 0.5s ease-in-out;
+    cursor: none;
+}
+
+.wrapperBtn button:hover {
+    color: $labelColor;
+}
+
+.wrapperBtn button:not(:last-child){
+    margin-right: 40px;
+}
+
+
+//Add Author Quote
+#addNewQuotes {
+    grid-column: 1 / 6;
+    grid-row: 5 / 8;
+    display: none;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat (4, 25% );
+    padding: 0px 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+#addNewQuotes::before {
+    content: "";
+    background: #eee;
+    opacity: 0.2;
+    position: absolute;
+    border-radius: 8px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+#addNewQuotes h2 {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 10px 0px;
+}
+
+.wrapperQuoteBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.wrapperAuthor {
+    margin-top: 20px;
+}
+
+#btnAddQuote {
+    font-size: $font-xlg;
+    color: wheat;
+    position: relative;
+}
+
+#btnAddQuote:hover {
+    color: $labelColor;
+}
+
+
+

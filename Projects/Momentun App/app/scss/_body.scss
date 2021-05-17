@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    color: $bodyColor;
+}
+
+#main {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(16, 6.25%);
+    grid-template-rows: repeat(16, 6.25%);
+    background-image: url(../images/morning.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+

@@ -1,0 +1,36 @@
+#container-c {
+    grid-column: 2 / 13;
+    grid-row: 2 / 4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    margin-right: 50px;
+}
+#container-c::before {
+    content: "";
+    background: $bgcolor;
+    position: absolute;
+    border-radius: 4px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: $bgopacity
+  }
+
+#displayDate {
+    font-size: $font-xlg;
+    position: relative;
+    font-family: 'Special Elite', cursive;
+    margin-top: 12px;
+}
+
+#displayTime {
+    font-size: 5rem;
+    position: relative;
+    font-family: 'Special Elite', cursive;
+    margin-top: 24px;
+}
+
+

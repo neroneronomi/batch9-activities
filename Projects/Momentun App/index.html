@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <title>Momentum App</title>
+
+</head>
+<body>
+    <div id="main">
+        <div id="container-a">
+                <h2>DAILY STANDUP</h2>
+            <div id="addSu">
+                <div class="wrapperName">
+                    <input id="addName" type="text" name="name" maxlength="20" autocomplete="off" required spellcheck="false">
+                    <div class="underline"></div>
+                    <label for="name">Your Name?</label>
+                </div>
+                <div class="wrapperYesterday">
+                    <input id="addYesterday" type="text" name="yesterday" maxlength="40" autocomplete="off" required spellcheck="false"> 
+                    <div class="underline"></div>
+                    <label for="yesterday">What did you do yesterday?</label>
+                </div>
+                <div class="wrapperFocus">
+                    <input id="addFocus" type="text" name="focus" maxlength="40" autocomplete="off" required spellcheck="false">
+                    <div class="underline"></div>
+                    <label for="focus">What are you doing today?</label>     
+                </div>
+                <div class="wrapperNote"> 
+                    <input id="addNote" type="text" name="note" maxlength="40" autocomplete="off" required spellcheck="false">
+                    <div class="underline"></div>
+                    <label for="note">Do you have any blockers?</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="container-b">
+            <div id="displayMusic">
+                <iframe src="https://open.spotify.com/embed/playlist/0EKC1MEEFpYCNjRZ6bmtKe" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+
+        <div id="container-c">
+            <div id="displayDate"></div>
+            <div id="displayTime"></div>    
+        </div>
+
+        <div id="container-d">
+            <h1 id="displayGreeting"></h1>
+            <div id="displayName"><h1 id="name"><i class="fas fa-user-ninja"></i></h1></div>
+            <div id="displaySu">
+                <div id="displayYesterday">
+                    <h3>Yesterday Progress :</h3>
+                    <p id="yesterday"><br></p>
+                </div>
+                <div id="displayFocus">
+                    <h3>Focus for today :</h3>
+                    <P id="focus"><br></P>
+                </div>
+                <div id="displayNote"> 
+                    <h3>Blockers :</h3>
+                    <p id="note"><br></p>
+                </div>
+            </div>
+
+            <h2>TO DO LIST</h2>
+            <div class="toDoList">
+                <div id="addToDoList">
+                    <div class="wrapperList">
+                    <input id="addList" type="text" maxlength="40"  required spellcheck="false">
+                    <div class="underline"></div>
+                    <label>Add Task</label>
+                    </div>
+                </div>
+                <div id="displayToDoList"> <ul></ul></div>
+            </div>
+
+            <div id="displayQuote"  class="fade-in">
+                <i class="fas fa-quote-left"></i>
+                <div class="wrapperQuote">
+                    <div id="quote"><p>Programming isn't about what you know; it's about what you can figure out.</p></div>
+                    <div id="author"><p>- Chris Pine</p></div>
+                </div>
+            </div>
+            <div class="wrapperBtn">
+                <button id="btnQuoteAdd"><i class="fas fa-plus"></i>
+                <button id="btnQuoteNext"><i class="fas fa-dice-d6"></i>
+            </div>
+            <div id="addNewQuotes" class="fade-in">
+                <h2>Add Quote</h2>
+                <div class="wrapperQuote">
+                    <input id="addQuote" type="text" required autocomplete="off" spellcheck="false">
+                    <div class="underline"></div>
+                    <label>Quote</label>   
+                </div>
+                <div class="wrapperAuthor">
+                    <input id="addAuthor" type="text" required autocomplete="off" spellcheck="false">
+                    <div class="underline"></div>
+                    <label>Author</label>
+                </div>
+                <div class="wrapperQuoteBtn">
+                    <button id="btnAddQuote"><i class="fas fa-file-import"></i>
+                    </div>
+            </div>
+        </div>
+        <div id="displayAlerts">   
+            <div id="toDoAlert">
+            <span id="close-toDoAlert">
+                <i class="fas fa-times"></i>
+            </span>
+            <p>Relax! Don't overwork yourself. Finish your current task first. (12)</p>
+          </div>
+        </div>
+     </div>
+    <script src="./app/js/main.js"></script>
+</body>
+</html>
