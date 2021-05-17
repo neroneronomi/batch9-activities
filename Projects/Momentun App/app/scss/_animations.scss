@@ -1,0 +1,346 @@
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.wrapperName {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapperName input {
+    outline: none;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    color: $inputColor;
+}
+
+.wrapperName input:focus ~ label,
+.wrapperName input:valid ~ label {
+    transform: translateY(-25px);
+    font-size: 15px;
+    color: $labelColor
+}
+
+.wrapperName label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: $placeHolderColor;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.wrapperName .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.wrapperName .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: $underlineColor;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.wrapperName input:focus ~ .underline:before,
+.wrapperName input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+.wrapperYesterday {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.wrapperYesterday input {
+    outline: none;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    color: $inputColor;
+}
+
+.wrapperYesterday input:focus ~ label,
+.wrapperYesterday input:valid ~ label {
+    transform: translateY(-25px);
+    font-size: 15px;
+    color: $labelColor
+}
+
+.wrapperYesterday label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: $placeHolderColor;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.wrapperYesterday .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.wrapperYesterday .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: $underlineColor;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.wrapperYesterday input:focus ~ .underline:before,
+.wrapperYesterday input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+.wrapperFocus {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.wrapperFocus input {
+    outline: none;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    color: $inputColor;
+}
+
+.wrapperFocus input:focus ~ label,
+.wrapperFocus input:valid ~ label {
+    transform: translateY(-25px);
+    font-size: 15px;
+    color: $labelColor
+}
+
+.wrapperFocus label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: $placeHolderColor;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.wrapperFocus .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.wrapperFocus .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: $underlineColor;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.wrapperFocus input:focus ~ .underline:before,
+.wrapperFocus input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+.wrapperNote {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapperNote input {
+    outline: none;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    color: $inputColor;
+}
+
+.wrapperNote input:focus ~ label,
+.wrapperNote input:valid ~ label {
+    transform: translateY(-25px);
+    font-size: 15px;
+    color: $labelColor
+}
+
+.wrapperNote label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: $placeHolderColor;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.wrapperNote .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.wrapperNote .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: $underlineColor;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.wrapperNote input:focus ~ .underline:before,
+.wrapperNote input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+.wrapperAuthor {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapperAuthor input {
+    outline: none;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    color: $inputColor;
+    background: transparent;
+}
+
+.wrapperAuthor input:focus ~ label,
+.wrapperAuthor input:valid ~ label {
+    transform: translateY(-25px);
+    font-size: 15px;
+    color: $labelColor
+}
+
+.wrapperAuthor label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: $placeHolderColor;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.wrapperAuthor .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.wrapperAuthor .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: $underlineColor;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.wrapperAuthor input:focus ~ .underline:before,
+.wrapperAuthor input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+.wrapperQuote {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapperQuote input {
+    outline: none;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    color: $inputColor;
+    background: transparent;
+}
+
+.wrapperQuote input:focus ~ label,
+.wrapperQuote input:valid ~ label {
+    transform: translateY(-25px);
+    font-size: 15px;
+    color: $labelColor
+}
+
+.wrapperQuote label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: $placeHolderColor;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.wrapperQuote .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.wrapperQuote .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: $underlineColor;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.wrapperQuote input:focus ~ .underline:before,
+.wrapperQuote input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+

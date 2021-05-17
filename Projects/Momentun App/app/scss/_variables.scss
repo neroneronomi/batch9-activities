@@ -1,0 +1,30 @@
+//Colors
+$red: #d40000;
+$darkgray: #303137;
+$placeHolderColor: silver;
+$labelColor: #DFB015;
+$inputColor: wheat;
+$underlineColor: #DFB015;
+$buttonColor: #DFB015;
+$bodyColor: #DFB015;
+$borderColor: 2px solid silver;
+
+//Background Before
+$bgcolor: linear-gradient(to right top, #000000, #1c1515, #302220, #443029, #574131, #574131, #574131, #574131, #443029, #302220, #1c1515, #000000);
+$bgopacity: 0.75;
+
+//Font Size
+$font-es: 0.75rem;
+$font-sm: 1rem;
+$font-med: 1.125rem; 
+$font-lg: 1.5rem;
+$font-xlg: 2rem;
+
+//Font Family
+$open-sans: 'Open Sans', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+//for testing purpose
+$testborder: 1.5px solid red;
+$testbgc: wheat;
+$testxhadow: 0px 0px 10px rgba(0,0,0,0.1);
