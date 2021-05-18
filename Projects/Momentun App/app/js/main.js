@@ -303,8 +303,8 @@ var eveningCSS = "./dist/mainDM.css"
 
 function toggleDM() {
     cssLink.setAttribute("href", eveningCSS);
-
 }
+
 function toggleLM() {
   cssLink.setAttribute("href", morningCSS);
 }
