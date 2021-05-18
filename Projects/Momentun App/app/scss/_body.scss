@@ -33,3 +33,29 @@ a, a:visited, a:hover {
     text-decoration: none;
 }
 
+#darkMode {
+    grid-column: 16;
+    grid-row: 16;
+    place-self: center;
+}
+
+#darkMode button {
+    font-size: $font-xlg;
+}
+
+#darkMode button:not(:last-child) {
+    margin-right: 20px;
+}
+
+#btnLM {
+    color: white;
+    transform: rotate(180deg);
+}
+
+#btnLM {
+    display: none;
+}
+
+
+
+
