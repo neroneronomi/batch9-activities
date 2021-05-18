@@ -294,4 +294,25 @@ function toggleQuote() {
 btnQuoteAdd.addEventListener("click", toggleQuote)
 
 
+//Toggle Dark Mode
+var cssLink = document.getElementById("cssLink");
+var btnDM = document.getElementById("btnDM");
+var btnLM = document.getElementById("btnLM");
+var morningCSS = "./dist/main.css"
+var eveningCSS = "./dist/mainDM.css"
+
+function toggleDM() {
+    cssLink.setAttribute("href", eveningCSS);
+
+}
+function toggleLM() {
+  cssLink.setAttribute("href", morningCSS);
+}
+
+btnDM.addEventListener("click", toggleDM);
+
+btnLM.addEventListener("click", toggleLM);
+
+
+
 

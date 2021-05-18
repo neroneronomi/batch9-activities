@@ -41,7 +41,7 @@
   border: none;
   font-size: 17px;
   border-bottom: 2px solid silver;
-  color: wheat;
+  color: white;
 }
 
 .wrapperName input:focus ~ label,
@@ -49,14 +49,14 @@
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   font-size: 15px;
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 .wrapperName label {
   position: absolute;
   bottom: 10px;
   left: 0;
-  color: silver;
+  color: white;
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -74,7 +74,7 @@
   content: "";
   height: 100%;
   width: 100%;
-  background: #DFB015;
+  background: #4aaeda;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -104,7 +104,7 @@
   border: none;
   font-size: 17px;
   border-bottom: 2px solid silver;
-  color: wheat;
+  color: white;
 }
 
 .wrapperYesterday input:focus ~ label,
@@ -112,14 +112,14 @@
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   font-size: 15px;
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 .wrapperYesterday label {
   position: absolute;
   bottom: 10px;
   left: 0;
-  color: silver;
+  color: white;
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -137,7 +137,7 @@
   content: "";
   height: 100%;
   width: 100%;
-  background: #DFB015;
+  background: #4aaeda;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -166,7 +166,7 @@
   border: none;
   font-size: 17px;
   border-bottom: 2px solid silver;
-  color: wheat;
+  color: white;
 }
 
 .wrapperFocus input:focus ~ label,
@@ -174,14 +174,14 @@
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   font-size: 15px;
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 .wrapperFocus label {
   position: absolute;
   bottom: 10px;
   left: 0;
-  color: silver;
+  color: white;
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -199,7 +199,7 @@
   content: "";
   height: 100%;
   width: 100%;
-  background: #DFB015;
+  background: #4aaeda;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -227,7 +227,7 @@
   border: none;
   font-size: 17px;
   border-bottom: 2px solid silver;
-  color: wheat;
+  color: white;
 }
 
 .wrapperNote input:focus ~ label,
@@ -235,14 +235,14 @@
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   font-size: 15px;
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 .wrapperNote label {
   position: absolute;
   bottom: 10px;
   left: 0;
-  color: silver;
+  color: white;
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -260,7 +260,7 @@
   content: "";
   height: 100%;
   width: 100%;
-  background: #DFB015;
+  background: #4aaeda;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -288,7 +288,7 @@
   border: none;
   font-size: 17px;
   border-bottom: 2px solid silver;
-  color: wheat;
+  color: white;
   background: transparent;
 }
 
@@ -297,14 +297,14 @@
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   font-size: 15px;
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 .wrapperAuthor label {
   position: absolute;
   bottom: 10px;
   left: 0;
-  color: silver;
+  color: white;
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -322,7 +322,7 @@
   content: "";
   height: 100%;
   width: 100%;
-  background: #DFB015;
+  background: #4aaeda;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -350,7 +350,7 @@
   border: none;
   font-size: 17px;
   border-bottom: 2px solid silver;
-  color: wheat;
+  color: white;
   background: transparent;
 }
 
@@ -359,14 +359,14 @@
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   font-size: 15px;
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 .wrapperQuote label {
   position: absolute;
   bottom: 10px;
   left: 0;
-  color: silver;
+  color: white;
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -384,7 +384,7 @@
   content: "";
   height: 100%;
   width: 100%;
-  background: #DFB015;
+  background: #4aaeda;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -430,28 +430,28 @@
   width: 96%;
   margin: 8px;
   padding: 4px 10px;
-  border: 2px solid silver;
+  border: 2px solid white;
   position: relative;
   font-size: 1.125rem;
-  color: wheat;
+  color: white;
   border-radius: 8px;
 }
 
 #displayToDoList li:hover {
-  border: 2px solid #DFB015;
+  border: 2px solid #4aaeda;
 }
 
 #displayToDoList li button {
   background: none;
   border: none;
   float: right;
-  color: wheat;
+  color: white;
   font-weight: 800;
 }
 
 .done {
   text-decoration: line-through;
-  background: #DFB015 !important;
+  background: #4aaeda !important;
 }
 
 .delete {
@@ -470,8 +470,8 @@
   width: 100%;
   border: none;
   font-size: 17px;
-  border-bottom: 2px solid silver;
-  color: wheat;
+  border-bottom: 2px solid white;
+  color: white;
   background: transparent;
 }
 
@@ -480,14 +480,14 @@
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   font-size: 15px;
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 .wrapperList label {
   position: absolute;
   bottom: 10px;
   left: 0;
-  color: silver;
+  color: white;
   pointer-events: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -505,7 +505,7 @@
   content: "";
   height: 100%;
   width: 100%;
-  background: #DFB015;
+  background: #4aaeda;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -530,7 +530,7 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 #main {
@@ -542,7 +542,7 @@ body {
       grid-template-columns: repeat(16, 6.25%);
   -ms-grid-rows: (6.25%)[16];
       grid-template-rows: repeat(16, 6.25%);
-  background-image: url(../images/morning.jpg);
+  background-image: url(../images/evening.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -581,10 +581,6 @@ a, a:visited, a:hover {
           transform: rotate(180deg);
 }
 
-#btnLM {
-  display: none;
-}
-
 #container-a {
   -ms-grid-column: 13;
   -ms-grid-column-span: 3;
@@ -598,15 +594,14 @@ a, a:visited, a:hover {
 
 #container-a::before {
   content: "";
-  background: -webkit-gradient(linear, left bottom, right top, from(#000000), color-stop(#1c1515), color-stop(#302220), color-stop(#443029), color-stop(#574131), color-stop(#574131), color-stop(#574131), color-stop(#574131), color-stop(#443029), color-stop(#302220), color-stop(#1c1515), to(#000000));
-  background: linear-gradient(to right top, #000000, #1c1515, #302220, #443029, #574131, #574131, #574131, #574131, #443029, #302220, #1c1515, #000000);
+  background: black;
   position: absolute;
   border-radius: 4px;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.75;
+  opacity: 0.55;
 }
 
 #container-a h2 {
@@ -653,14 +648,6 @@ a, a:visited, a:hover {
   position: relative;
 }
 
-#musicEvening {
-  display: none;
-}
-
-#musicMorning {
-  display: block;
-}
-
 #container-c {
   -ms-grid-column: 2;
   -ms-grid-column-span: 11;
@@ -683,15 +670,14 @@ a, a:visited, a:hover {
 
 #container-c::before {
   content: "";
-  background: -webkit-gradient(linear, left bottom, right top, from(#000000), color-stop(#1c1515), color-stop(#302220), color-stop(#443029), color-stop(#574131), color-stop(#574131), color-stop(#574131), color-stop(#574131), color-stop(#443029), color-stop(#302220), color-stop(#1c1515), to(#000000));
-  background: linear-gradient(to right top, #000000, #1c1515, #302220, #443029, #574131, #574131, #574131, #574131, #443029, #302220, #1c1515, #000000);
+  background: black;
   position: absolute;
   border-radius: 4px;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.75;
+  opacity: 0.55;
 }
 
 #displayDate {
@@ -728,15 +714,14 @@ a, a:visited, a:hover {
 
 #container-d::before {
   content: "";
-  background: -webkit-gradient(linear, left bottom, right top, from(#000000), color-stop(#1c1515), color-stop(#302220), color-stop(#443029), color-stop(#574131), color-stop(#574131), color-stop(#574131), color-stop(#574131), color-stop(#443029), color-stop(#302220), color-stop(#1c1515), to(#000000));
-  background: linear-gradient(to right top, #000000, #1c1515, #302220, #443029, #574131, #574131, #574131, #574131, #443029, #302220, #1c1515, #000000);
+  background: black;
   position: absolute;
   border-radius: 4px;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.75;
+  opacity: 0.55;
 }
 
 #displayGreeting {
@@ -765,7 +750,7 @@ a, a:visited, a:hover {
   font-family: 'Special Elite', cursive;
   letter-spacing: 1.3px;
   text-transform: capitalize;
-  color: wheat;
+  color: white;
 }
 
 #displayName:hover {
@@ -773,7 +758,7 @@ a, a:visited, a:hover {
           animation: pulse 1.5s infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  color: #DFB015;
+  color: #4aaeda;
   cursor: none;
 }
 
@@ -830,7 +815,7 @@ a, a:visited, a:hover {
 }
 
 #displaySu p {
-  color: wheat;
+  color: white;
   font-size: 1.125rem;
 }
 
@@ -851,7 +836,7 @@ a, a:visited, a:hover {
   position: relative;
   margin-top: 10px;
   margin-left: 50px;
-  border-top: 2px solid #DFB015;
+  border-top: 2px solid #003366;
 }
 
 #quote {
@@ -861,7 +846,7 @@ a, a:visited, a:hover {
 #author {
   margin-top: 20px;
   font-size: 1.125rem;
-  color: wheat;
+  color: white;
 }
 
 .wrapperBtn {
@@ -878,14 +863,14 @@ a, a:visited, a:hover {
   margin: 5px 10px;
   font-size: 2rem;
   position: relative;
-  color: wheat;
+  color: white;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   cursor: none;
 }
 
 .wrapperBtn button:hover {
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 .wrapperBtn button:not(:last-child) {
@@ -951,12 +936,12 @@ a, a:visited, a:hover {
 
 #btnAddQuote {
   font-size: 2rem;
-  color: wheat;
+  color: white;
   position: relative;
 }
 
 #btnAddQuote:hover {
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 #toDoAlert {
@@ -1017,6 +1002,19 @@ a, a:visited, a:hover {
   z-index: 1;
 }
 
+#btnDM {
+  display: none;
+}
+
+#musicEvening {
+  display: block;
+}
+
+#musicMorning {
+  display: none;
+}
+
+
 #toDoAlert #close-toDoAlert {
   font-size: 15px;
   font-size: 1rem;
@@ -1031,7 +1029,7 @@ a, a:visited, a:hover {
 }
 
 #toDoAlert #close-toDoAlert i:hover {
-  color: #DFB015;
+  color: #4aaeda;
 }
 
 @-webkit-keyframes move {
