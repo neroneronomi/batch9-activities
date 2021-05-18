@@ -1,3 +1,9 @@
+#world {
+  grid-column: 1 / 17;
+  grid-row: 1 / 17;
+  background: transparent;
+}
+
 .fade-in {
   opacity: 1;
   -webkit-animation-name: fadeInOpacity;
@@ -655,15 +661,9 @@ a, a:visited, a:hover {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   grid-row: 2 / 4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 100%;
   position: relative;
   margin-right: 50px;
 }
@@ -681,6 +681,8 @@ a, a:visited, a:hover {
 }
 
 #displayDate {
+  grid-column: 1;
+  place-self: center;
   font-size: 2rem;
   position: relative;
   font-family: 'Special Elite', cursive;
@@ -688,6 +690,8 @@ a, a:visited, a:hover {
 }
 
 #displayTime {
+  grid-column: 2;
+  place-self: center;
   font-size: 5rem;
   position: relative;
   font-family: 'Special Elite', cursive;
