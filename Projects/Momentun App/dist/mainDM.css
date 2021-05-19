@@ -1,3 +1,17 @@
+#min {
+  float: right;
+  color: #4aaeda;
+  display: block;
+  position: relative;
+}
+
+#max {
+  float: right;
+  color: #4aaeda;
+  display: none;
+  position: relative;
+}
+
 #world {
   grid-column: 1 / 17;
   grid-row: 1 / 17;

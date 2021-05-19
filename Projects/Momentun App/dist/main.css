@@ -717,6 +717,20 @@ a, a:visited, a:hover {
   letter-spacing: 1.3px;
 }
 
+#min {
+  float: right;
+  color: #DFB015;
+  display: block;
+  position: relative;
+}
+
+#max {
+  float: right;
+  color: #DFB015;
+  display: none;
+  position: relative;
+}
+
 #addSu {
   height: 80%;
   display: -webkit-box;
