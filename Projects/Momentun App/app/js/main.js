@@ -314,16 +314,31 @@ btnDM.addEventListener("click", toggleDM);
 
 btnLM.addEventListener("click", toggleLM);
 
-mobileBtn.addEventListener("click", () => {
-  if (cssLink.hasAttribute("href", morningCSS)) {
-  cssLink.setAttribute("href", eveningCSS);
-} else {
-  cssLink.setAttribute("href", morningCSS);
+//Minimize Daily Standup
+var min = document.getElementById("min");
+var max = document.getElementById("max");
+var addSu = document.getElementById("addSu");
+var containerA = document.getElementById("container-a");
+var containerB = document.getElementById("container-b");
+
+function mini() {
+  addSu.style.display = "none"
+  containerA.style.gridRow = "3 / 3";
+  containerB.style.gridRow = "4 / 15";
+  min.style.display = "none";
+  max.style.display = "block";
 }
-})
 
+function maxi() {
+  addSu.style.display = "flex"
+  containerA.style.gridRow = "3 / 9";
+  containerB.style.gridRow = "9 / 15";
+  min.style.display = "block";
+  max.style.display = "none";
+}
 
-
+min.addEventListener("click", mini);
+max.addEventListener("click", maxi);
 //TESTING LNG WALA MAGAWA
 //https://codepen.io/dhruvaldesai/pen/QWbMRNm 
 // One of my first <canvas> experiments, woop! :D 
