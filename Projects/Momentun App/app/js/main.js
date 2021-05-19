@@ -298,6 +298,7 @@ btnQuoteAdd.addEventListener("click", toggleQuote)
 var cssLink = document.getElementById("cssLink");
 var btnDM = document.getElementById("btnDM");
 var btnLM = document.getElementById("btnLM");
+var mobileBtn = document.getElementById("mobileBtn");
 var morningCSS = "./dist/main.css"
 var eveningCSS = "./dist/mainDM.css"
 
@@ -313,10 +314,18 @@ btnDM.addEventListener("click", toggleDM);
 
 btnLM.addEventListener("click", toggleLM);
 
+mobileBtn.addEventListener("click", () => {
+  if (cssLink.hasAttribute("href", morningCSS)) {
+  cssLink.setAttribute("href", eveningCSS);
+} else {
+  cssLink.setAttribute("href", morningCSS);
+}
+})
+
 
 
 //TESTING LNG WALA MAGAWA
-
+//https://codepen.io/dhruvaldesai/pen/QWbMRNm 
 // One of my first <canvas> experiments, woop! :D 
 
 var SCREEN_WIDTH = window.innerWidth;
