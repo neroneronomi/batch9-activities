@@ -1,0 +1,76 @@
+@media screen and ( max-width: 420px ) and ( max-height: 823px) {
+
+    #main {
+        width: 100%;
+        height: 100vh;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-evenly;
+       align-items: center;
+    }
+    #container-a {
+        display: none; 
+    }
+    #container-b {
+        display: none;
+    }
+    #container-c {
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column;
+        height: fit-content;
+        width: 90%;
+    }
+
+    #displayDate {
+        font-size: $font-med !important;
+    }
+
+    #displayTime {
+      font-size: 3rem !important;
+    }
+    #container-d {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 90%;
+        height: 80%;
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    #container-d h2 {
+        margin-top: 20px;
+    }
+    .toDoList {
+        padding: 20px 20px;
+        height: 100%;
+    }
+
+    #displayToDoList {
+        overflow-y: scroll;
+    }
+
+    #container-d h1, #displayName, #displaySu,
+    #displayQuote, #addNewQuote, .wrapperBtn {
+        display: none !important;
+    }
+
+    #mobileBtn {
+        display: block !important;
+        width: 100%;
+        text-align: center;
+        color: $labelColor;
+        font-size: $font-med;
+    }
+
+    #darkMode {
+        display: none;
+    }
+
+    #displayAlerts {
+        display: none !important;
+    }
+
+}
+
