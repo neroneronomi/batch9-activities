@@ -233,7 +233,7 @@ var quotes = [
   {author:"Eleanor Roosevelt, This is My Story", quote:"No one can make you feel inferior without your consent."},
   {author:"Ralph Waldo Emerson", quote:"To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment."},
   {author:"Martin Luther King", quote:"You don't have to see the whole staircase, just take the first step."}
-];
+];  
 
 var deg = 45;
 btnQuoteNext.addEventListener("click", () => {
@@ -276,22 +276,25 @@ btnAddQuote.addEventListener("click", addNewQuoteAfterClick)
 
 
 //Toggle Display of Add New Quote
+
 var btnQuoteAdd = document.getElementById("btnQuoteAdd");
-var addNewQuotes = document.getElementById("addNewQuotes");
-var adeg = 90;
+
+var adeg = 45;
 function toggleQuote() {
-  if (addNewQuotes.style.display === "none" && displayQuote.style.display === "block") {
-    addNewQuotes.style.display = "grid";
-    displayQuote.style.display = "none";
+  let x = document.getElementById("addNewQuotes").style;
+  let y = document.getElementById("displayQuote").style;
+  if (x.display == "none" || x.display == "" && y.display == "block" || y.display == "") {
+    x.display = "grid";
+    y.display = "none";
   } else {
-    addNewQuotes.style.display = "none";
-    displayQuote.style.display = "block";
+    x.display = "none";
+    y.display = "block";
   }
   btnQuoteAdd.style.transform = "rotate("+ adeg + "deg)";
   adeg = adeg + 45;
   }
 
-btnQuoteAdd.addEventListener("click", toggleQuote)
+btnQuoteAdd.addEventListener("click", toggleQuote);
 
 
 //Toggle Dark Mode
