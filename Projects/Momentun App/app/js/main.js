@@ -258,6 +258,8 @@ function quoteLength() {
 function addNewQuote() {
   const newQuote = {'author': addAuthor.value, 'quote' : addQuote.value,};
   quotes.push(newQuote);
+  quote.innerText = addQuote.value;
+  author.innerText = addAuthor.value;
   addAuthor.value = "";
   addQuote.value = "";
   addNewQuotes.style.display = "none";
