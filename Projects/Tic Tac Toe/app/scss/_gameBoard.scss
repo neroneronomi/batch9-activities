@@ -1,0 +1,78 @@
+#board {
+    grid-column: 4 / 6;
+    grid-row:  3 / 7;
+    place-self: center;
+    display: none;
+    grid-template-columns: repeat(3, auto);
+    width: 380px;
+    position: relative;
+    padding: 40px 40px;
+}
+
+
+#board::before {
+    content: "";
+    background: black;
+    position: absolute;
+    border-radius: 12px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1.6px solid black;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell:nth-child(1){
+    border-top: none;
+    border-left: none;
+}
+
+.cell:nth-child(2) {
+    border-top: none;
+}
+
+.cell:nth-child(3) {
+    border-top: none;
+    border-right: none;
+}
+
+.cell:nth-child(4) {
+    border-left: none;
+}
+
+.cell:nth-child(6) {
+    border-right: none;
+}
+
+.cell:nth-child(7) {
+    border-left: none;
+    border-bottom: none;
+}
+
+.cell:nth-child(8) {
+    border-bottom: none;
+}
+
+.cell:nth-child(9) {
+    border-right: none;
+    border-bottom: none;
+}
+
+.cell.X {
+    cursor: not-allowed;
+}
+
+.cell.O {
+    cursor: not-allowed;
+}

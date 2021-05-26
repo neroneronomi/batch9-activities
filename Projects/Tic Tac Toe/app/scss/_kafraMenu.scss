@@ -1,0 +1,87 @@
+#kafraMenu {
+    grid-column: 4 / 6;
+    grid-row: 7;
+    width: 100%;
+    place-self: center;
+    display: none;
+    grid-template-columns: 25% 75%;
+}
+#kafraMenu img {
+    grid-column: 1;
+    justify-self: end;
+}
+
+#kafraButtons{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#kafraMenu button {
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    font-family: $alegreya;
+    width: 60%;
+    color: white;
+    position: relative;
+    font-size: $font-med;
+}
+
+#kafraMenu button span {
+    position: relative;
+}
+
+#kafraMenu button::before {
+    content: "";
+    background: black;
+    position: absolute;
+    border-radius: 12px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+}
+
+#kafraMenu button:active {
+        transform: translateY(1px);
+}
+
+#startBtn {
+    grid-column: 4 / 6;
+    grid-row: 4;
+    font-size: $font-xlg;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    margin: 20px 60px;
+    color: white;
+    font-family: $alegreya;
+    position: relative;
+    font-size: $font-xlg;
+    transition: transform .3s;
+}
+
+#startBtn span {
+    position: relative;
+}
+
+#startBtn::before {
+    content: "";
+    background: black;
+    position: absolute;
+    border-radius: 12px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+}
+
+#startBtn:hover {
+    transform: scale(1.15)
+}
