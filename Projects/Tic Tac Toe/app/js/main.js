@@ -36,7 +36,6 @@ const winningConditions = [
     [2, 4, 6]
 ];
 
-
 //Mini Functions for Result and Player Control
 function winningEmote() {
     if (currentPlayer === player1) {
@@ -47,7 +46,7 @@ function winningEmote() {
         player1Result.innerHTML = loseEmote;
         player2Result.innerHTML = winEmote;
         win2.style.display = "block"
-    };
+    }
         pinkTurn.style.display = "none";
         greenTurn.style.display = "none";
 }
@@ -68,8 +67,6 @@ function currentPlayerTurn() {
     return `${player2Turn}`;
     }
 }
-
-
 
 function displayPlayerMove(clickedCell, clickedCellIndex) {
     gameState[clickedCellIndex] = currentPlayer;
@@ -92,7 +89,7 @@ function changePlayerTurn() {
 
 gameStatus.innerHTML = currentPlayerTurn();
 
-//Reslt Validation
+//Result Validation
 function resultValidation() {
     let roundWon = false;
     for (let i = 0; i <= 7; i++) {
@@ -101,6 +98,7 @@ function resultValidation() {
         let b = gameState[winCondition[1]];
         let c = gameState[winCondition[2]];
         if (a === '' || b === '' || c === '') {
+            console.log(winCondition)
             continue;
         }
         if (a === b && b === c) {
@@ -113,6 +111,7 @@ function resultValidation() {
         gameStatus.innerHTML = winningMessage();
         winningEmote();
         kafraMenu.style.display = "grid"
+        nextBtn.style.visibility = 'hidden';
         gameActive = false;
         return;
     }
@@ -125,6 +124,7 @@ function resultValidation() {
         pinkTurn.style.display = "none";
         greenTurn.style.display = "none";
         kafraMenu.style.display = "grid"
+        nextBtn.style.visibility = 'hidden';
         gameActive = false;
         return;
     }
@@ -147,6 +147,7 @@ function onCellClick(clickedCellEvent) {
     gameHistory.push(moveObject);
     displayPlayerMove(clickedCell, clickedCellIndex);
     resultValidation();
+
 }
 
 gameCell.forEach(cell => {
@@ -184,7 +185,7 @@ resetBtn.addEventListener('click', gameReset);
         lastCell.innerHTML = "";
         prevHistory.push(lastMove);
         gameHistory.pop();
-    } else {
+    } if (gameHistory.length === 0) {
         previousBtn.style.visibility = 'hidden';
     }
 
@@ -200,9 +201,8 @@ nextBtn.addEventListener('click', () => {
         nextCell.innerHTML = nextPoring;
         gameHistory.push(nextMove);
         prevHistory.pop();
-    } else {
+    } if (prevHistory.length === 0) {
         nextBtn.style.visibility = 'hidden';
-        previousBtn.style.visibility = 'visible';
     }
 })
 

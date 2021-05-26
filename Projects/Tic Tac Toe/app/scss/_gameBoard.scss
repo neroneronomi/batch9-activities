@@ -9,7 +9,6 @@
     padding: 40px 40px;
 }
 
-
 #board::before {
     content: "";
     background: black;
@@ -69,10 +68,6 @@
     border-bottom: none;
 }
 
-.cell.X {
-    cursor: not-allowed;
-}
-
-.cell.O {
-    cursor: not-allowed;
+.cell img {
+    cursor: none;
 }
