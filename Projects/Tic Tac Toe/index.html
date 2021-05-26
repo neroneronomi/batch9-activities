@@ -57,13 +57,19 @@
             </div>
         </div>
 
-        <audio id="backgroundMusic" controls>
+
+
+        <audio id="backgroundMusic" loop>
             <source src="./images/pronteraBgm.mp3" type="audio/mpeg">
         </audio>
-
+        <div id="bgmControl">
+            <button id="volumeMute"><i class="fas fa-volume-mute"></i></button>
+            <button id="volumeOn"><i class="fas fa-volume-up"></i></button>
+        </div>
+        
         <script>
             var audio = document.getElementById("backgroundMusic");
-            audio.volume = 0.015;
+            audio.volume = 0.05;
         </script>
 
     </div>

@@ -17,6 +17,8 @@ body{
     grid-template-rows: repeat(8, 12.5%);
     background-image: url(../images/asd.jpeg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
 }
 
@@ -45,4 +47,34 @@ audio {
     width: 80%;
     height: 20%;
     display: none;
+}
+
+#bgmControl {
+    grid-column: 8;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#bgmControl button {
+    background: transparent;
+    border: none;
+    color: white;
+    position: relative;
+    font-size: $font-lg;
+}
+
+#bgmControl button:active {
+    transform: translateY(1px);
+}
+
+#volumeMute {
+    display: none;
+}
+
+#volumeOn {
+    display: none;
+
 }
