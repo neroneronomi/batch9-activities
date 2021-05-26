@@ -13,6 +13,8 @@ var kafraMenu = document.getElementById("kafraMenu");
 
 let player1 = `<img src="./images/pinkPoring.gif" alt="X">`
 let player2 = `<img src="./images/greenPoring.gif" alt="O">`
+let player1Turn = `<img src="./images/player-1-turn.gif" alt="X">`
+let player2Turn = `<img src="./images/player-2-turn.gif" alt="O">`
 let winEmote = `<img id="test" src="./images/winEmote.gif" alt="win">`
 let loseEmote = `<img src="./images/loseEmote.gif" alt="lose">`
 let drawEmote = `<img src="./images/drawEmote.gif" alt="draw">`
@@ -59,8 +61,15 @@ function drawMessage() {
 }
 
 function currentPlayerTurn() {
-    return `${currentPlayer}`;
+    // return `${currentPlayer}`;
+    if (currentPlayer === player1) {
+        return `${player1Turn}`;
+    } else {
+    return `${player2Turn}`;
+    }
 }
+
+
 
 function displayPlayerMove(clickedCell, clickedCellIndex) {
     gameState[clickedCellIndex] = currentPlayer;
@@ -161,7 +170,7 @@ function gameReset() {
     gameHistory.length = 0;
     prevHistory.length = 0;
     nextBtn.style.visibility = 'visible';
-        previousBtn.style.visibility = 'visible';
+    previousBtn.style.visibility = 'visible';
 }
 
 resetBtn.addEventListener('click', gameReset);
@@ -200,7 +209,7 @@ nextBtn.addEventListener('click', () => {
 //Reference 1: "https://dev.to/bornasepic/pure-and-simple-tic-tac-toe-with-javascript-4pgn"
 //Reference 2:  "https://yvettetan.github.io/batch8-activities/TicTacToe/"
 
-//Extras - Start Button - Background Music
+//Extras - Start Button
 var showPlayer1 = document.getElementById("player1");
 var showPlayer2 = document.getElementById("player2");
 var playerTurnIndicator = document.getElementById("playerTurnIndicator");
@@ -208,6 +217,8 @@ var board = document.getElementById("board");
 var header = document.getElementById("header");
 var startBtn = document.getElementById("startBtn")
 var audio = document.getElementById("backgroundMusic");
+var volumeMute = document.getElementById("volumeMute");
+var volumeOn = document.getElementById("volumeOn");
 
 startBtn.addEventListener('click', () => {
     showPlayer1.style.display = "grid";
@@ -218,7 +229,19 @@ startBtn.addEventListener('click', () => {
     startBtn.style.display = "none";
     gameStatus.style.display = "block"
     audio.play();
+    volumeOn.style.display = "block";
 });
 
 //Extras - Background Music
+volumeOn.addEventListener('click', () => {
+    audio.volume = 0;
+    volumeOn.style.display = "none"
+    volumeMute.style.display = "block"
+});
+
+volumeMute.addEventListener('click', () => {
+    audio.volume = 0.05;
+    volumeOn.style.display = "block"
+    volumeMute.style.display = "none"
+});
 

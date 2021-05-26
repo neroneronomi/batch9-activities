@@ -21,6 +21,8 @@ body {
       grid-template-rows: repeat(8, 12.5%);
   background-image: url(../images/asd.jpeg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -64,6 +66,41 @@ audio {
   display: none;
 }
 
+#bgmControl {
+  -ms-grid-column: 8;
+  grid-column: 8;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#bgmControl button {
+  background: transparent;
+  border: none;
+  color: white;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+#bgmControl button:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+#volumeMute {
+  display: none;
+}
+
+#volumeOn {
+  display: none;
+}
+
 #board {
   -ms-grid-column: 4;
   -ms-grid-column-span: 2;
@@ -95,7 +132,7 @@ audio {
 .cell {
   width: 100px;
   height: 100px;
-  border: 1.6px solid black;
+  border: 2px solid white;
   cursor: pointer;
   position: relative;
   display: -webkit-box;
