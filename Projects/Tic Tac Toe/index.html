@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div id="main">
+
+        <h1 id="header">Tic Tac Toe</h1>
+        <button id="startBtn""><span>Start Game</span></button>
+        <h2 id="gameStatus"></h2>
+
+        <div id="player1">
+            <div class="player1Result"></div>
+            <img class="win1" src="./images/acoWinLeft.gif" alt="">
+            <img class="players1" src="./images/player-1.gif" alt="">
+            <img class="poring1" src="./images/pinkPoring.gif" alt="">
+        </div>
+        <div id="player2">
+            <div class="player2Result"></div>
+            <img class="win2" src="./images/acoWinRight.gif" alt="">
+            <img class="poring2" src="./images/greenPoring.gif" alt="">
+            <img class="players2" src="./images/player-2.gif" alt="">   
+        </div>
+
+        <div id="playerTurnIndicator">
+            <img class="pinkTurn" src="./images/acoRight.gif" alt="rightTurn">
+            <img class="greenTurn" src="./images/acoLeft.gif" alt="leftTurn">
+        </div>
+        
+        <div id="board">
+            <div data-cell-index="0" class="cell"></div>
+            <div data-cell-index="1" class="cell"></div>
+            <div data-cell-index="2" class="cell"></div>
+            <div data-cell-index="3" class="cell"></div>
+            <div data-cell-index="4" class="cell"></div>
+            <div data-cell-index="5" class="cell"></div>
+            <div data-cell-index="6" class="cell"></div>
+            <div data-cell-index="7" class="cell"></div>
+            <div data-cell-index="8" class="cell"></div>
+        </div>
+
+        <div id="kafraMenu">
+            <img src="./images/kafra.gif" alt="Kafra">
+            <div id="kafraButtons">
+            <button id="previousBtn"><span>Previous</span></button>
+            <button id="nextBtn"><span>Next</span></button>
+            <button class="game-restart"><span>Play Again</span></button>
+            </div>
+        </div>
+
+        <audio id="backgroundMusic" controls>
+            <source src="./images/pronteraBgm.mp3" type="audio/mpeg">
+        </audio>
+
+        <script>
+            var audio = document.getElementById("backgroundMusic");
+            audio.volume = 0.015;
+        </script>
+
+    </div>
+    <script src="./app/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+//All about player 1
+#player1 {
+    grid-column: 2 / 4;
+    grid-row: 4 / 6;
+    display: none;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 30% 70%;
+    width: 100%;
+    height: 100%;
+}
+
+.players1 {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+    align-self: center;
+    width: 50%;
+}
+
+.poring1 {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    align-self: center;
+    width: 40%;
+    margin-top: 80px;
+}
+
+.player1Result{
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 60% 30% 10%;
+}
+
+.player1Result img {
+    grid-column: 2;
+    place-self: center;
+}
+
+.win1 {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    display: none;
+}
+
+//All abot Player 2
+#player2 {
+    grid-column: 6 / 8;
+    grid-row: 4 / 6;
+    display: none;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 30% 70%;
+    width: 100%;
+    height: 100%;
+}
+
+.players2 {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    align-self: center;
+    width: 50%;
+}
+
+.poring2 {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+    align-self: center;
+    width: 40%;
+    margin-top: 80px;
+}
+
+.player2Result {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 10% 30% 60%;
+}
+
+.player2Result img {
+    grid-column: 2;
+    place-self: center;
+}
+
+.win2 {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    display: none;
+}
+
+//Player Turn Indicator
+#playerTurnIndicator {
+    grid-column: 4 / 6;
+    grid-row: 7;
+    display: none;
+    grid-template-columns: 35% 30% 35%;
+    place-items: center;
+}
+
+.pinkTurn {
+    grid-column: 1;
+    width: 35%;
+    display: block;
+}
+
+.greenTurn {
+    grid-column: 3;
+    width: 35%;
+    display: none;
+}
