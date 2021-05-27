@@ -98,7 +98,6 @@ function resultValidation() {
         let b = gameState[winCondition[1]];
         let c = gameState[winCondition[2]];
         if (a === '' || b === '' || c === '') {
-            console.log(winCondition)
             continue;
         }
         if (a === b && b === c) {
@@ -154,15 +153,13 @@ gameCell.forEach(cell => {
     cell.addEventListener('click', onCellClick)
 });
 
-//Reset Button
+//Reset Button - Play Again
 function gameReset() {
     gameActive = true;
-    currentPlayer = player1;
+    currentPlayer = currentPlayer;
     gameState = ["", "", "", "", "", "", "", "", ""];
     gameCell.forEach(cell => cell.innerHTML = "");
     gameStatus.innerHTML = currentPlayerTurn();
-    pinkTurn.style.display = "block";
-    greenTurn.style.display = "none";
     player1Result.innerHTML = "";
     player2Result.innerHTML = "";
     win1.style.display = "none";
@@ -172,6 +169,14 @@ function gameReset() {
     prevHistory.length = 0;
     nextBtn.style.visibility = 'visible';
     previousBtn.style.visibility = 'visible';
+
+    if (currentPlayer === player1) {
+        pinkTurn.style.display = "block";
+        greenTurn.style.display = "none"
+    } else {
+        pinkTurn.style.display = "none";
+        greenTurn.style.display = "block"
+    }
 }
 
 resetBtn.addEventListener('click', gameReset);
@@ -221,13 +226,11 @@ var volumeMute = document.getElementById("volumeMute");
 var volumeOn = document.getElementById("volumeOn");
 
 startBtn.addEventListener('click', () => {
-    showPlayer1.style.display = "grid";
-    showPlayer2.style.display = "grid";
-    board.style.display = "grid";
-    playerTurnIndicator.style.display = "grid";
+   
+    pickHeader.style.display = "block";
+    pickPlayer.style.display = "flex";
     header.style.display = "none";
     startBtn.style.display = "none";
-    gameStatus.style.display = "block"
     audio.play();
     volumeOn.style.display = "block";
 });
@@ -244,4 +247,32 @@ volumeMute.addEventListener('click', () => {
     volumeOn.style.display = "block"
     volumeMute.style.display = "none"
 });
+
+//Extras - Pick first move
+var pickPlayer = document.getElementById("pickPlayer");
+var pickHeader = document.getElementById("pickHeader");
+var pickPlayer1 = document.querySelector(".pickPlayer1");
+var pickPlayer2 = document.querySelector(".pickPlayer2");
+
+pickPlayer1.addEventListener('click', () => {
+    showPlayer1.style.display = "grid";
+    showPlayer2.style.display = "grid";
+    playerTurnIndicator.style.display = "grid";
+    gameStatus.style.display = "block"
+    board.style.display = "grid";
+    pickHeader.style.display = "none";
+    pickPlayer.style.display = "none";
+})
+
+pickPlayer2.addEventListener('click', () => {
+    changePlayerTurn();
+    showPlayer1.style.display = "grid";
+    showPlayer2.style.display = "grid";
+    playerTurnIndicator.style.display = "grid";
+    gameStatus.style.display = "block"
+    board.style.display = "grid";
+    pickHeader.style.display = "none";
+    pickPlayer.style.display = "none";
+    
+})
 
