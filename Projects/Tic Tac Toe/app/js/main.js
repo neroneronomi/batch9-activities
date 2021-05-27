@@ -144,9 +144,11 @@ function onCellClick(clickedCellEvent) {
     moveObject.cell = clickedCell;
     moveObject.poring = currentPlayer;
     gameHistory.push(moveObject);
+
     displayPlayerMove(clickedCell, clickedCellIndex);
     resultValidation();
-
+    hover();
+    disableHover();
 }
 
 gameCell.forEach(cell => {
@@ -169,6 +171,7 @@ function gameReset() {
     prevHistory.length = 0;
     nextBtn.style.visibility = 'visible';
     previousBtn.style.visibility = 'visible';
+    hover()
 
     if (currentPlayer === player1) {
         pinkTurn.style.display = "block";
@@ -262,6 +265,7 @@ pickPlayer1.addEventListener('click', () => {
     board.style.display = "grid";
     pickHeader.style.display = "none";
     pickPlayer.style.display = "none";
+    hover()
 })
 
 pickPlayer2.addEventListener('click', () => {
@@ -273,6 +277,27 @@ pickPlayer2.addEventListener('click', () => {
     board.style.display = "grid";
     pickHeader.style.display = "none";
     pickPlayer.style.display = "none";
-    
+    hover()
 })
 
+//Extras - Player Turn Hover
+var pink = `url(../images/pinkPoring.gif)`
+var green = `url(../images/greenPoring.gif)`
+
+function hover() {
+gameCell.forEach((cell) => {
+    if(currentPlayer === player1) {
+        cell.style.setProperty('--td-background-color', pink);
+    } else {
+        cell.style.setProperty('--td-background-color', green);
+    }
+    })
+}
+
+function disableHover() {
+    gameCell.forEach((cell) => {
+    if (gameActive === false) {
+        cell.style.setProperty('--td-background-color', 'none');
+    }
+    })
+}

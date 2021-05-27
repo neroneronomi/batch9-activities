@@ -14,3 +14,10 @@
         opacity: 1;
     }
 }
+
+.cell:hover {
+    background-image: var(--td-background-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+}

@@ -237,6 +237,13 @@ audio {
   }
 }
 
+.cell:hover {
+  background-image: var(--td-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+}
+
 #player1 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
