@@ -39,7 +39,7 @@ h1 {
     place-content: center;
     font-size: 4vw;
     background-color: $lightbrown;
-    transition: all 0.8s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .black {
@@ -53,14 +53,14 @@ h1 {
 
 .white:nth-last-child(-n+16):hover, 
 .black:nth-last-child(-n+16):hover {
-    animation: pulse 0.8s infinite;
+    animation: pulse 0.5s infinite;
     animation-timing-function: linear;
     cursor: grab; 
 }
 
 .white:nth-child(-n+16):hover, 
 .black:nth-child(-n+16):hover {
-    animation: pulse 0.8s infinite;
+    animation: pulse 0.5s infinite;
     animation-timing-function: linear;
     cursor: grab; 
 }
