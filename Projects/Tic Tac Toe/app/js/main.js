@@ -152,7 +152,7 @@ function onCellClick(clickedCellEvent) {
 
 gameCell.forEach(cell => {
     cell.addEventListener('click', onCellClick)
-});
+})
 
 //Reset Button - Play Again
 function gameReset() {
@@ -177,7 +177,7 @@ function gameReset() {
         greenTurn.style.display = "none"
     } else {
         pinkTurn.style.display = "none";
-        greenTurn.style.display = "block"
+        greenTurn.style.display = "block";
     }
 }
 
@@ -196,7 +196,7 @@ resetBtn.addEventListener('click', gameReset);
         previousBtn.style.visibility = 'hidden';
     }
 
-});
+})
 
 //Next Button
 nextBtn.addEventListener('click', () => {
@@ -211,7 +211,7 @@ nextBtn.addEventListener('click', () => {
     } if (prevHistory.length === 0) {
         nextBtn.style.visibility = 'hidden';
     }
-});
+})
 
 //Reference 1: "https://dev.to/bornasepic/pure-and-simple-tic-tac-toe-with-javascript-4pgn"
 //Reference 2:  "https://yvettetan.github.io/batch8-activities/TicTacToe/"
@@ -235,20 +235,20 @@ startBtn.addEventListener('click', () => {
     startBtn.style.display = "none";
     audio.play();
     volumeOn.style.display = "block";
-});
+})
 
 //Extras - Background Music
 volumeOn.addEventListener('click', () => {
     audio.volume = 0;
-    volumeOn.style.display = "none"
-    volumeMute.style.display = "block"
-});
+    volumeOn.style.display = "none";
+    volumeMute.style.display = "block";
+})
 
 volumeMute.addEventListener('click', () => {
     audio.volume = 0.05;
-    volumeOn.style.display = "block"
-    volumeMute.style.display = "none"
-});
+    volumeOn.style.display = "block";
+    volumeMute.style.display = "none";
+})
 
 //Extras - Pick first move
 var pickPlayer = document.getElementById("pickPlayer");
