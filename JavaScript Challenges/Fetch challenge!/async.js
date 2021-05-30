@@ -1,12 +1,13 @@
 const fetch = require('node-fetch');
 
-async function getJoke() {
-    let getNewJoke = new Promise((resolve, reject) => {
-            fetch("https://api.chucknorris.io/jokes/random")
+async function getUser() {
+    let user = new Promise((resolve, reject) => {
+            fetch("https://randomuser.me/api")
             .then((response) => response.json())
-            .then((data) => console.log(data))
+            .then((data) => data.results[0])
     })
-    let result = await joke;
+    let result = await user;
     console.log(result);
 }
-getJoke();
+var user = getUser();
+console.log(user);
