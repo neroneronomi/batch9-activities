@@ -83,7 +83,6 @@ function changePlayerTurn() {
         pinkTurn.style.display = "block";
         greenTurn.style.display = "none"
     }
-
     gameStatus.innerHTML = currentPlayerTurn();
 }
 
@@ -212,7 +211,7 @@ nextBtn.addEventListener('click', () => {
     } if (prevHistory.length === 0) {
         nextBtn.style.visibility = 'hidden';
     }
-})
+});
 
 //Reference 1: "https://dev.to/bornasepic/pure-and-simple-tic-tac-toe-with-javascript-4pgn"
 //Reference 2:  "https://yvettetan.github.io/batch8-activities/TicTacToe/"
