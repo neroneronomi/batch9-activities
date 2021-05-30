@@ -12,12 +12,6 @@
   position: relative;
 }
 
-#world {
-  grid-column: 1 / 17;
-  grid-row: 1 / 17;
-  background: transparent;
-}
-
 .fade-in {
   opacity: 1;
   -webkit-animation-name: fadeInOpacity;

@@ -637,17 +637,6 @@ body {
   position: relative;
 }
 
-#world {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 16;
-  grid-column: 1 / 17;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 16;
-  grid-row: 1 / 17;
-  background: transparent;
-  display: none;
-}
-
 button {
   background: transparent;
   border: none;
