@@ -345,6 +345,9 @@ function glitchEffect() {
         pIndicator.classList.add("flash");
         board.classList.add("flash");
         kafraMenu.classList.add("glitch");
+        volumeMute.classList.add("flash");
+        volumeOn.classList.add("glitch");
         mainDiv.classList.add("noise");
+
     }
 }
