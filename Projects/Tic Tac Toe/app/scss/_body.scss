@@ -89,3 +89,22 @@ audio {
     display: none;
 
 }
+
+#gameStatus {
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+}
+
+#gameStatus::before {
+    content: "";
+    background: black;
+    position: absolute;
+    border-radius: 12px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+    z-index: -1;
+}
