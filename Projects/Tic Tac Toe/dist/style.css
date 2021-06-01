@@ -7,7 +7,7 @@
 
 body {
   font-family: "Alegreya Sans SC", sans-serif;
-  background: wheat;
+  background: black;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -261,6 +261,146 @@ audio {
   background-repeat: no-repeat;
   background-position: center;
   opacity: 1;
+}
+
+.noise {
+  width: 100vw;
+  height: 100vh;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-animation: noise 0.3s steps(1, start) infinite;
+          animation: noise 0.3s steps(1, start) infinite;
+  opacity: 0.7;
+  position: absolute;
+}
+
+@-webkit-keyframes noise {
+  0% {
+    background-position: 50% 50%;
+  }
+  10% {
+    background-position: 62% 38%;
+  }
+  20% {
+    background-position: 35% 57%;
+  }
+  30% {
+    background-position: 40% 64%;
+  }
+  40% {
+    background-position: 68% 35%;
+  }
+  50% {
+    background-position: 51% 54%;
+  }
+  60% {
+    background-position: 40% 35%;
+  }
+  60% {
+    background-position: 36% 63%;
+  }
+  80% {
+    background-position: 52% 65%;
+  }
+  90% {
+    background-position: 38% 64%;
+  }
+  100% {
+    background-position: 51% 60%;
+  }
+}
+
+@keyframes noise {
+  0% {
+    background-position: 50% 50%;
+  }
+  10% {
+    background-position: 62% 38%;
+  }
+  20% {
+    background-position: 35% 57%;
+  }
+  30% {
+    background-position: 40% 64%;
+  }
+  40% {
+    background-position: 68% 35%;
+  }
+  50% {
+    background-position: 51% 54%;
+  }
+  60% {
+    background-position: 40% 35%;
+  }
+  60% {
+    background-position: 36% 63%;
+  }
+  80% {
+    background-position: 52% 65%;
+  }
+  90% {
+    background-position: 38% 64%;
+  }
+  100% {
+    background-position: 51% 60%;
+  }
+}
+
+.glitch {
+  -webkit-animation: glitch 0.25s linear alternate infinite, flash 0.7s steps(5, start) infinite;
+          animation: glitch 0.25s linear alternate infinite, flash 0.7s steps(5, start) infinite;
+}
+
+.flash {
+  -webkit-animation: flash 0.001s steps(5, start) infinite;
+          animation: flash 0.001s steps(5, start) infinite;
+}
+
+@-webkit-keyframes glitch {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+            clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes glitch {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+            clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 #player1 {

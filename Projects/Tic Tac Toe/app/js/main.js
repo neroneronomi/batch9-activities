@@ -135,6 +135,7 @@ function resultValidation() {
         players1.setAttribute("src", players1Idle );
         players2.setAttribute("src", players2Idle );
         winC();
+        glitchEffect();
         gameActive = false;
         return;
     }
@@ -327,4 +328,23 @@ function disableHover() {
         cell.style.setProperty('--td-background-color', 'none');
     }
     })
+}
+
+//Extras - Glitch Effect
+var p1Div = document.getElementById("player1");
+var p2Div = document.getElementById("player2");
+var pIndicator = document.getElementById("playerTurnIndicator");
+var board = document.getElementById("board");
+var mainDiv = document.getElementById("main")
+
+function glitchEffect() {
+    if (winC1 === 2 && winC2 === 11) {
+        gameStatus.classList.add("glitch");
+        p1Div.classList.add("flash");
+        p2Div.classList.add("flash");
+        pIndicator.classList.add("flash");
+        board.classList.add("flash");
+        kafraMenu.classList.add("glitch");
+        mainDiv.classList.add("noise");
+    }
 }
