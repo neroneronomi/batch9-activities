@@ -10,6 +10,8 @@ var resetBtn = document.querySelector(".game-restart");
 var nextBtn = document.getElementById("nextBtn")
 var previousBtn = document.getElementById("previousBtn");
 var kafraMenu = document.getElementById("kafraMenu");
+var players1 = document.querySelector(".players1");
+var players2 = document.querySelector(".players2");
 
 let player1 = `<img src="./images/pinkPoring.gif" alt="X">`
 let player2 = `<img src="./images/greenPoring.gif" alt="O">`
@@ -18,12 +20,18 @@ let player2Turn = `<img src="./images/player-2-turn.gif" alt="O">`
 let winEmote = `<img id="test" src="./images/winEmote.gif" alt="win">`
 let loseEmote = `<img src="./images/loseEmote.gif" alt="lose">`
 let drawEmote = `<img src="./images/drawEmote.gif" alt="draw">`
+let players1Idle = `./images/player-1.gif`;
+let players1Turn = `./images/player-1-turn.gif`;
+let players2Idle = `./images/player-2.gif`;
+let players2Turn = `./images/player-2-turn.gif`;
 
 let gameActive = true;;
 let currentPlayer = player1;
 let gameState = ["", "", "", "", "", "", "", "", ""];
 let gameHistory = [];
 let prevHistory = [];
+let winC1 = 0
+let winC2 = 0
 
 const winningConditions = [
     [0, 1, 2],
@@ -60,11 +68,24 @@ function drawMessage() {
 }
 
 function currentPlayerTurn() {
-    // return `${currentPlayer}`;
     if (currentPlayer === player1) {
-        return `${player1Turn}`;
+        players1.setAttribute("src", players1Turn )
+        players1.style.width = "35%"
+        players2.setAttribute("src", players2Idle )
+        return `${winC1} : ${winC2}`;
     } else {
-    return `${player2Turn}`;
+        players2.setAttribute("src", players2Turn )
+        players1.style.width = "50%"
+        players1.setAttribute("src", players1Idle )
+        return `${winC1} : ${winC2}`;
+    }
+}
+
+function winC() {
+    if (currentPlayer === player1) {
+        winC1 = winC1 + 1;
+    } else {
+        winC2 = winC2 + 1;
     }
 }
 
@@ -110,6 +131,10 @@ function resultValidation() {
         winningEmote();
         kafraMenu.style.display = "grid"
         nextBtn.style.visibility = 'hidden';
+        players1.style.width = "50%"
+        players1.setAttribute("src", players1Idle );
+        players2.setAttribute("src", players2Idle );
+        winC();
         gameActive = false;
         return;
     }
@@ -123,6 +148,9 @@ function resultValidation() {
         greenTurn.style.display = "none";
         kafraMenu.style.display = "grid"
         nextBtn.style.visibility = 'hidden';
+        players1.style.width = "50%"
+        players1.setAttribute("src", players1Idle )
+        players2.setAttribute("src", players2Idle )
         gameActive = false;
         return;
     }
