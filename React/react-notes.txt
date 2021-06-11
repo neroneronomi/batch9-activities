@@ -1,0 +1,31 @@
+React Starter 
+npx create-react-app ./
+cd src
+rm -f
+cd ..
+npm start
+
+touch index.js - root 
+touch App.js - First Component / optional
+
+File Structure
+ui.jsx, logic.js, styles.css/scss 
+pages > general web pages ex: home
+components > any components  ex: navbar , header,
+validation > validation handlings ex: errors input
+helper > general functions: functions that can be reused througout the web.
+and so on..
+
+npm installs
+npm install @ant-design/icons axios react-chat-engine
+
+
+
+
+
+
+
+
+
+
+
