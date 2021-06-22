@@ -1,67 +1,67 @@
 //Calendar
 function showDateTime() {
-    var displayTime = document.getElementById("displayTime");
-    var displayDate = document.getElementById("displayDate");
+  var displayTime = document.getElementById("displayTime");
+  var displayDate = document.getElementById("displayDate");
 
-    var date = new Date();
-    var dayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    var monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    ];
+  var date = new Date();
+  var dayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
 
-    var dayName = dayList[date.getDay()];
-    var monthName = monthNames[date.getMonth()];
-    var today = `${dayName}, ${monthName}, ${date.getDate()}, ${date.getFullYear()}`;
+  var dayName = dayList[date.getDay()];
+  var monthName = monthNames[date.getMonth()];
+  var today = `${dayName}, ${monthName}, ${date.getDate()}, ${date.getFullYear()}`;
 
-    function addZero(i) {
-        if (i < 10) {
-          i = "0" + i;
-        }
-        return i;
-      }
-      
-    var hour = addZero(date.getHours());
-    var min = addZero(date.getMinutes());
-    var sec = addZero(date.getSeconds());
-    var time = hour + ":" + min + ":" + sec;
-
-    displayTime.innerText = time;
-    displayDate.innerText = today;
-
-  }
-  setInterval(showDateTime, 1000);
-
-  //Greetings
-  function showGreetings() {
-    var displayGreeting = document.getElementById("displayGreeting");
-    var textGreeting = "Hello";
-    var date = new Date();
-    var greetHour = date.getHours();
-
-    if (greetHour < 12){
-      textGreeting = "Good Morning,";
-    } else if (greetHour < 18) {
-      textGreeting = "Good Afternoon,";
-    } else {
-      textGreeting = "Good Evening,";
+  function addZero(i) {
+    if (i < 10) {
+      i = "0" + i;
     }
-
-    displayGreeting.innerText = textGreeting
+    return i;
   }
-   setInterval(showGreetings, 1000);
 
-   
+  var hour = addZero(date.getHours());
+  var min = addZero(date.getMinutes());
+  var sec = addZero(date.getSeconds());
+  var time = hour + ":" + min + ":" + sec;
+
+  displayTime.innerText = time;
+  displayDate.innerText = today;
+
+}
+setInterval(showDateTime, 1000);
+
+//Greetings
+function showGreetings() {
+  var displayGreeting = document.getElementById("displayGreeting");
+  var textGreeting = "Hello";
+  var date = new Date();
+  var greetHour = date.getHours();
+
+  if (greetHour < 12) {
+    textGreeting = "Good Morning,";
+  } else if (greetHour < 18) {
+    textGreeting = "Good Afternoon,";
+  } else {
+    textGreeting = "Good Evening,";
+  }
+
+  displayGreeting.innerText = textGreeting
+}
+setInterval(showGreetings, 1000);
+
+
 //To Do List
 var btnList = document.getElementById("btnList");
 var addList = document.getElementById("addList");
@@ -72,47 +72,47 @@ var listAmount = 0;
 var toDoAlert = document.getElementById("toDoAlert");
 var closeToDoAlert = document.getElementById("close-toDoAlert")
 
-function toDoLength(){
-	return addList.value.length;
-} 
+function toDoLength() {
+  return addList.value.length;
+}
 
 function createListElement() {
-	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(addList.value));
-	ul.appendChild(li);
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(addList.value));
+  ul.appendChild(li);
   li.classList.add("fade-in");
-	addList.value = "";
+  addList.value = "";
 
-	function toggleDone() {
-		li.classList.toggle("done");
-	}
-	li.addEventListener("click",toggleDone);
+  function toggleDone() {
+    li.classList.toggle("done");
+  }
+  li.addEventListener("click", toggleDone);
 
-	var deleteBtn = document.createElement("button");
-	deleteBtn.appendChild(document.createTextNode("X"));
-	li.appendChild(deleteBtn);
-	deleteBtn.addEventListener("click", deleteListItem);
+  var deleteBtn = document.createElement("button");
+  deleteBtn.appendChild(document.createTextNode("X"));
+  li.appendChild(deleteBtn);
+  deleteBtn.addEventListener("click", deleteListItem);
 
-	function deleteListItem(){
-		li.classList.add("delete");
+  function deleteListItem() {
+    li.classList.add("delete");
     listAmount--;
-	}
+  }
 }
 
 function addListAfterKeypress(event) {
-	if (toDoLength() > 0 && event.which === 13 && listAmount < listLimit) {
-		createListElement();
+  if (toDoLength() > 0 && event.which === 13 && listAmount < listLimit) {
+    createListElement();
     listAmount++;
-	} 
+  }
   if (listAmount === listLimit) {
     toDoAlert.style.display = "block";
   }
 }
 
-  closeToDoAlert.addEventListener("click", () => {
-    toDoAlert.style.display = " none";
-  })
-  addList.addEventListener("keypress", addListAfterKeypress);
+closeToDoAlert.addEventListener("click", () => {
+  toDoAlert.style.display = " none";
+})
+addList.addEventListener("keypress", addListAfterKeypress);
 
 
 //Input Page + Display Page
@@ -125,37 +125,37 @@ var displayYesterday = document.getElementById("displayYesterday");
 var displayFocus = document.getElementById("displayFocus");
 var displayNote = document.getElementById("displayNote");
 
-  function nameLength(){
-    return addName.value.length;
-  } 
-  function yesterdayLength(){
-    return addYesterday.value.length;
-  }
-  function focusLength(){
-    return addFocus.value.length;
-  } 
-  function noteLength(){
-    return addNote.value.length;
-  } 
+function nameLength() {
+  return addName.value.length;
+}
+function yesterdayLength() {
+  return addYesterday.value.length;
+}
+function focusLength() {
+  return addFocus.value.length;
+}
+function noteLength() {
+  return addNote.value.length;
+}
 
 
 //Add Display Name
 function createNameElement() {
   var deleteName = document.getElementById("name");
   deleteName.remove();
-	var name = document.createElement("h1");
+  var name = document.createElement("h1");
   name.setAttribute("id", "name")
   name.classList.add("fade-in");
-	name.appendChild(document.createTextNode(addName.value));
+  name.appendChild(document.createTextNode(addName.value));
   displayName.appendChild(name);
-	addName.value = "";
+  addName.value = "";
 }
 
 
 function addNameAfterKeypress(event) {
-	if (nameLength() > 0 && event.which === 13) {
+  if (nameLength() > 0 && event.which === 13) {
     createNameElement();
-	} 
+  }
 }
 
 addName.addEventListener("keypress", addNameAfterKeypress);
@@ -164,18 +164,18 @@ addName.addEventListener("keypress", addNameAfterKeypress);
 function createYesterdayElement() {
   var deleteYesterday = document.getElementById("yesterday");
   deleteYesterday.remove();
-	var yesterday = document.createElement("p");
+  var yesterday = document.createElement("p");
   yesterday.setAttribute("id", "yesterday");
   yesterday.classList.add("fade-in");
-	yesterday.appendChild(document.createTextNode(addYesterday.value));
+  yesterday.appendChild(document.createTextNode(addYesterday.value));
   displayYesterday.appendChild(yesterday);
-	addYesterday.value = "";
+  addYesterday.value = "";
 }
 
 function addYesterdayAfterKeypress(event) {
-	if (yesterdayLength() > 0 && event.which === 13) {
+  if (yesterdayLength() > 0 && event.which === 13) {
     createYesterdayElement();
-	} 
+  }
 }
 
 addYesterday.addEventListener("keypress", addYesterdayAfterKeypress);
@@ -184,18 +184,18 @@ addYesterday.addEventListener("keypress", addYesterdayAfterKeypress);
 function createFocusElement() {
   var deleteFocus = document.getElementById("focus");
   deleteFocus.remove();
-	var focus = document.createElement("p");
+  var focus = document.createElement("p");
   focus.setAttribute("id", "focus")
   focus.classList.add("fade-in");
-	focus.appendChild(document.createTextNode(addFocus.value));
+  focus.appendChild(document.createTextNode(addFocus.value));
   displayFocus.appendChild(focus);
-	addFocus.value = "";
+  addFocus.value = "";
 }
 
 function addFocusAfterKeypress(event) {
-	if (focusLength() > 0 && event.which === 13) {
+  if (focusLength() > 0 && event.which === 13) {
     createFocusElement();
-	} 
+  }
 }
 
 addFocus.addEventListener("keypress", addFocusAfterKeypress);
@@ -204,18 +204,18 @@ addFocus.addEventListener("keypress", addFocusAfterKeypress);
 function createNoteElement() {
   var deleteNote = document.getElementById("note");
   deleteNote.remove();
-	var note = document.createElement("p");
+  var note = document.createElement("p");
   note.setAttribute("id", "note")
   note.classList.add("fade-in");
-	note.appendChild(document.createTextNode(addNote.value));
+  note.appendChild(document.createTextNode(addNote.value));
   displayNote.appendChild(note);
-	addNote.value = "";
+  addNote.value = "";
 }
 
 function addNoteAfterKeypress(event) {
-	if (noteLength() > 0 && event.which === 13) {
+  if (noteLength() > 0 && event.which === 13) {
     createNoteElement();
-	} 
+  }
 }
 
 addNote.addEventListener("keypress", addNoteAfterKeypress);
@@ -228,19 +228,19 @@ var btnAddQuote = document.getElementById("btnAddQuote")
 var quote = document.getElementById("quote");
 var author = document.getElementById("author");
 var quotes = [
-  {author:"Bernard M. Baruch", quote:"Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind."},
-  {author:"Benjamin Spock", quote:"Trust yourself. You know more than you think you do."},
-  {author:"Eleanor Roosevelt, This is My Story", quote:"No one can make you feel inferior without your consent."},
-  {author:"Ralph Waldo Emerson", quote:"To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment."},
-  {author:"Martin Luther King", quote:"You don't have to see the whole staircase, just take the first step."}
-];  
+  { author: "Bernard M. Baruch", quote: "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind." },
+  { author: "Benjamin Spock", quote: "Trust yourself. You know more than you think you do." },
+  { author: "Eleanor Roosevelt, This is My Story", quote: "No one can make you feel inferior without your consent." },
+  { author: "Ralph Waldo Emerson", quote: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment." },
+  { author: "Martin Luther King", quote: "You don't have to see the whole staircase, just take the first step." }
+];
 
 var deg = 45;
 btnQuoteNext.addEventListener("click", () => {
   let random = Math.floor(Math.random() * quotes.length);
   quote.innerText = quotes[random].quote;
   author.innerText = "- " + quotes[random].author;
-  btnQuoteNext.style.transform = "rotate("+ deg + "deg)";
+  btnQuoteNext.style.transform = "rotate(" + deg + "deg)";
   deg = deg + 45;
 })
 
@@ -256,7 +256,7 @@ function quoteLength() {
 }
 
 function addNewQuote() {
-  const newQuote = {'author': addAuthor.value, 'quote' : addQuote.value,};
+  const newQuote = { 'author': addAuthor.value, 'quote': addQuote.value, };
   quotes.push(newQuote);
   quote.innerText = addQuote.value;
   author.innerText = addAuthor.value;
@@ -269,10 +269,10 @@ function addNewQuote() {
 function addNewQuoteAfterClick() {
   if (authorLength() > 0 && quoteLength() > 0) {
     addNewQuote();
-    btnQuoteAdd.style.transform = "rotate("+ adeg + "deg)";
+    btnQuoteAdd.style.transform = "rotate(" + adeg + "deg)";
     adeg = adeg + 45;
   }
- 
+
 }
 btnAddQuote.addEventListener("click", addNewQuoteAfterClick)
 
@@ -292,9 +292,9 @@ function toggleQuote() {
     x.display = "none";
     y.display = "block";
   }
-  btnQuoteAdd.style.transform = "rotate("+ adeg + "deg)";
+  btnQuoteAdd.style.transform = "rotate(" + adeg + "deg)";
   adeg = adeg + 45;
-  }
+}
 
 btnQuoteAdd.addEventListener("click", toggleQuote);
 
@@ -308,7 +308,7 @@ var morningCSS = "./dist/main.css"
 var eveningCSS = "./dist/mainDM.css"
 
 function toggleDM() {
-    cssLink.setAttribute("href", eveningCSS);
+  cssLink.setAttribute("href", eveningCSS);
 }
 
 function toggleLM() {
