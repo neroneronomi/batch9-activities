@@ -1,6 +1,6 @@
 # Avion Projects - Batch 9
 
-#### HTML - CSS - JS Projects - ReactJS
+#### HTML - CSS - JS / Projects
 <a href="https://neroneronomi.github.io/batch9-activities/front-end-projects/tribute-page/" target="_blank">Tribute Page</a><br>
 <a href="https://neroneronomi.github.io/batch9-activities/front-end-projects/survey-form/" target="_blank">Survey Form</a><br>
 <a href="https://neroneronomi.github.io/batch9-activities/front-end-projects/chessboard/flexboard/" target="_blank">Chessboard Flex</a><br>
