@@ -9,11 +9,11 @@ def check_array(nums)
   min = nums[0];
   nums.each do |item|
     if item > max
-			max = item;
-		elsif item < min
-			min = item
+      max = item;
+    elsif item < min
+      min = item
     end 
-   end    
+  end    
   return min
 end
 
