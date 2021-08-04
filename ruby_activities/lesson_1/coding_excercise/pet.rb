@@ -9,4 +9,4 @@ class Pet
   end
 end
 pet_1 = Pet.new("Yam", "Cat", "White")
-pet_1.detailsgi
+pet_1.details
