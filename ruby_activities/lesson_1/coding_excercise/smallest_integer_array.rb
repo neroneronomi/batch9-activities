@@ -8,13 +8,13 @@ def check_array(nums)
   max = nums[0];
   min = nums[0];
   nums.each do |item|
-    if(item > max)
+    if item > max
 			max = item;
-		elsif(item < min)
+		elsif item < min
 			min = item
     end 
    end    
-  return (min)
+  return min
 end
 
 print check_array([34, 15, 88, 2]),"\n"
