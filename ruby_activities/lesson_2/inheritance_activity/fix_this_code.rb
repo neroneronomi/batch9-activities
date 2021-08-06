@@ -25,21 +25,21 @@ class User
 
   protected
     def login
-      puts "User logged in. IP address: #{@ip_address}" # put "@" inside the curly braces
+      puts "User logged in. IP address: #{@ip_address}"
     end
 end
 
 class Admin < User
-  include AdminPermission # added code
-  def admin_login # added code
+  include AdminPermission
+  def admin_login
     login
   end
 end
 
 
 class Buyer < User
-  include BuyerPermission # added code
-  def buyer_login # added code
+  include BuyerPermission
+  def buyer_login
     login
   end
 end
