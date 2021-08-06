@@ -4,16 +4,16 @@
 #and then prints "Applying frosting" for Cupcake only.
 
 class Confection
-	def baking
-		puts "Baking at 350 degrees for 25 minutes."
-	end
+  def baking
+    puts "Baking at 350 degrees for 25 minutes."
+  end
 end
 
 class Cupcake < Confection
-	def baking
-		super
-		puts "Applying frosting."
-	end
+  def baking
+    super
+    puts "Applying frosting."
+  end
 end
 
 class BananaCake < Confection

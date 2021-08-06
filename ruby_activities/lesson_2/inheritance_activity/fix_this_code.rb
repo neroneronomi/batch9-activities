@@ -14,34 +14,34 @@ end
 
 class User
   def initialize(username, password, ip_address)
-	  @username = username # added code
-	  @password = password # added code
-	  @ip_address = ip_address # added code
+    @username = username
+    @password = password
+    @ip_address = ip_address
   end
 
-	def change_password=(password) # added method
-		puts "Password Changed!"
-	end
+  def change_password=(password)
+    puts "Password Changed!"
+  end
 
   protected
-  def login
-    puts "User logged in. IP address: #{@ip_address}" # put "@" inside the curly braces
-  end
+    def login
+      puts "User logged in. IP address: #{@ip_address}" # put "@" inside the curly braces
+    end
 end
 
 class Admin < User
-	include AdminPermission # added code
-	def admin_login # added code
+  include AdminPermission # added code
+  def admin_login # added code
     login
-  	end
+  end
 end
 
 
 class Buyer < User
-	include BuyerPermission # added code
-	def buyer_login # added code
+  include BuyerPermission # added code
+  def buyer_login # added code
     login
-  	end
+  end
 end
 
 ## execute
