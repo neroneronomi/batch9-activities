@@ -8,9 +8,9 @@ def count_positives_sum_negatives(lst)
   else
     lst.each { |number| 
     if number >0
-    x+=1
+      x+=1
     elsif number <0
-    y+=number
+      y+=number
     end
     }
     return x,y
