@@ -4,13 +4,13 @@
 #and then prints "Applying frosting" for Cupcake only.
 
 class Confection
-  def baking
+  def preparing
     puts "Baking at 350 degrees for 25 minutes."
   end
 end
 
 class Cupcake < Confection
-  def baking
+  def preparing
     super
     puts "Applying frosting."
   end
@@ -19,7 +19,7 @@ end
 class BananaCake < Confection
 end
 
-bake_bananacake = BananaCake.new
-bake_bananacake.baking
-bake_cupcake = Cupcake.new
-bake_cupcake.baking
+prepare_bananacake = BananaCake.new
+prepare_bananacake.preparing
+prepare_cupcake = Cupcake.new
+prepare_cupcake.preparing
